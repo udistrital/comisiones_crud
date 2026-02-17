@@ -15,13 +15,13 @@
     },
     "basePath": "/v1",
     "paths": {
-        "/anexo_comision/": {
+        "/documento_comision/": {
             "get": {
                 "tags": [
-                    "anexo_comision"
+                    "documento_comision"
                 ],
-                "description": "get AnexoComision",
-                "operationId": "AnexoComisionController.Get All",
+                "description": "get DocumentoComision",
+                "operationId": "DocumentoComisionController.Get All",
                 "parameters": [
                     {
                         "in": "query",
@@ -64,7 +64,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoComision"
+                            "$ref": "#/definitions/models.DocumentoComision"
                         }
                     },
                     "403": {
@@ -74,24 +74,24 @@
             },
             "post": {
                 "tags": [
-                    "anexo_comision"
+                    "documento_comision"
                 ],
-                "description": "create AnexoComision",
-                "operationId": "AnexoComisionController.Post",
+                "description": "create DocumentoComision",
+                "operationId": "DocumentoComisionController.Post",
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for AnexoComision content",
+                        "description": "body for DocumentoComision content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoComision"
+                            "$ref": "#/definitions/models.DocumentoComision"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.AnexoComision"
+                        "description": "{int} models.DocumentoComision"
                     },
                     "403": {
                         "description": "body is empty"
@@ -99,13 +99,13 @@
                 }
             }
         },
-        "/anexo_comision/{id}": {
+        "/documento_comision/{id}": {
             "get": {
                 "tags": [
-                    "anexo_comision"
+                    "documento_comision"
                 ],
-                "description": "get AnexoComision by id",
-                "operationId": "AnexoComisionController.Get One",
+                "description": "get DocumentoComision by id",
+                "operationId": "DocumentoComisionController.Get One",
                 "parameters": [
                     {
                         "in": "path",
@@ -119,7 +119,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoComision"
+                            "$ref": "#/definitions/models.DocumentoComision"
                         }
                     },
                     "403": {
@@ -129,10 +129,10 @@
             },
             "put": {
                 "tags": [
-                    "anexo_comision"
+                    "documento_comision"
                 ],
-                "description": "update the AnexoComision",
-                "operationId": "AnexoComisionController.Put",
+                "description": "update the DocumentoComision",
+                "operationId": "DocumentoComisionController.Put",
                 "parameters": [
                     {
                         "in": "path",
@@ -144,10 +144,10 @@
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for AnexoComision content",
+                        "description": "body for DocumentoComision content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoComision"
+                            "$ref": "#/definitions/models.DocumentoComision"
                         }
                     }
                 ],
@@ -155,7 +155,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoComision"
+                            "$ref": "#/definitions/models.DocumentoComision"
                         }
                     },
                     "403": {
@@ -165,10 +165,10 @@
             },
             "delete": {
                 "tags": [
-                    "anexo_comision"
+                    "documento_comision"
                 ],
-                "description": "delete the AnexoComision",
-                "operationId": "AnexoComisionController.Delete",
+                "description": "delete the DocumentoComision",
+                "operationId": "DocumentoComisionController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -188,13 +188,13 @@
                 }
             }
         },
-        "/anexo_solicitud/": {
+        "/documento_solicitud/": {
             "get": {
                 "tags": [
-                    "anexo_solicitud"
+                    "documento_solicitud"
                 ],
-                "description": "get AnexoSolicitud",
-                "operationId": "AnexoSolicitudController.Get All",
+                "description": "get DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Get All",
                 "parameters": [
                     {
                         "in": "query",
@@ -237,7 +237,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoSolicitud"
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
                         }
                     },
                     "403": {
@@ -247,24 +247,24 @@
             },
             "post": {
                 "tags": [
-                    "anexo_solicitud"
+                    "documento_solicitud"
                 ],
-                "description": "create AnexoSolicitud",
-                "operationId": "AnexoSolicitudController.Post",
+                "description": "create DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Post",
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for AnexoSolicitud content",
+                        "description": "body for DocumentoSolicitud content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoSolicitud"
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.AnexoSolicitud"
+                        "description": "{int} models.DocumentoSolicitud"
                     },
                     "403": {
                         "description": "body is empty"
@@ -272,13 +272,13 @@
                 }
             }
         },
-        "/anexo_solicitud/{id}": {
+        "/documento_solicitud/{id}": {
             "get": {
                 "tags": [
-                    "anexo_solicitud"
+                    "documento_solicitud"
                 ],
-                "description": "get AnexoSolicitud by id",
-                "operationId": "AnexoSolicitudController.Get One",
+                "description": "get DocumentoSolicitud by id",
+                "operationId": "DocumentoSolicitudController.Get One",
                 "parameters": [
                     {
                         "in": "path",
@@ -292,7 +292,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoSolicitud"
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
                         }
                     },
                     "403": {
@@ -302,10 +302,10 @@
             },
             "put": {
                 "tags": [
-                    "anexo_solicitud"
+                    "documento_solicitud"
                 ],
-                "description": "update the AnexoSolicitud",
-                "operationId": "AnexoSolicitudController.Put",
+                "description": "update the DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Put",
                 "parameters": [
                     {
                         "in": "path",
@@ -317,10 +317,10 @@
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for AnexoSolicitud content",
+                        "description": "body for DocumentoSolicitud content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoSolicitud"
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
                         }
                     }
                 ],
@@ -328,7 +328,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.AnexoSolicitud"
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
                         }
                     },
                     "403": {
@@ -338,10 +338,10 @@
             },
             "delete": {
                 "tags": [
-                    "anexo_solicitud"
+                    "documento_solicitud"
                 ],
-                "description": "delete the AnexoSolicitud",
-                "operationId": "AnexoSolicitudController.Delete",
+                "description": "delete the DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -2958,8 +2958,8 @@
         }
     },
     "definitions": {
-        "models.AnexoComision": {
-            "title": "AnexoComision",
+        "models.DocumentoComision": {
+            "title": "DocumentoComision",
             "type": "object",
             "properties": {
                 "Activo": {
@@ -2989,8 +2989,8 @@
                 }
             }
         },
-        "models.AnexoSolicitud": {
-            "title": "AnexoSolicitud",
+        "models.DocumentoSolicitud": {
+            "title": "DocumentoSolicitud",
             "type": "object",
             "properties": {
                 "Activo": {
@@ -3114,7 +3114,7 @@
                 "CodigoAbreviacion": {
                     "type": "string"
                 },
-                "Decripcion": {
+                "Descripcion": {
                     "type": "string"
                 },
                 "FechaCreacion": {
@@ -3195,7 +3195,7 @@
                 "RolUsuarioId": {
                     "$ref": "#/definitions/models.RolUsuario"
                 },
-                "TercerosId": {
+                "terceroId": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -3229,7 +3229,7 @@
                 "SolicitudId": {
                     "$ref": "#/definitions/models.Solicitud"
                 },
-                "TercerosId": {
+                "terceroId": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -3347,7 +3347,7 @@
                 "ObservacionCierre": {
                     "type": "string"
                 },
-                "TercerosId": {
+                "terceroId": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -3511,8 +3511,8 @@
             "description": "ObservacionController operations for Observacion\n"
         },
         {
-            "name": "anexo_solicitud",
-            "description": "AnexoSolicitudController operations for AnexoSolicitud\n"
+            "name": "documento_solicitud",
+            "description": "DocumentoSolicitudController operations for DocumentoSolicitud\n"
         },
         {
             "name": "tipo_documento_solicitud",
@@ -3531,8 +3531,8 @@
             "description": "EstadoComisionController operations for EstadoComision\n"
         },
         {
-            "name": "anexo_comision",
-            "description": "AnexoComisionController operations for AnexoComision\n"
+            "name": "documento_comision",
+            "description": "DocumentoComisionController operations for DocumentoComision\n"
         },
         {
             "name": "tipo_documento_comision",

@@ -11,12 +11,12 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 basePath: /v1
 paths:
-  /anexo_comision/:
+  /documento_comision/:
     get:
       tags:
-      - anexo_comision
-      description: get AnexoComision
-      operationId: AnexoComisionController.Get All
+      - documento_comision
+      description: get DocumentoComision
+      operationId: DocumentoComisionController.Get All
       parameters:
       - in: query
         name: query
@@ -46,32 +46,32 @@ paths:
         "200":
           description: ""
           schema:
-            $ref: '#/definitions/models.AnexoComision'
+            $ref: '#/definitions/models.DocumentoComision'
         "403":
           description: ""
     post:
       tags:
-      - anexo_comision
-      description: create AnexoComision
-      operationId: AnexoComisionController.Post
+      - documento_comision
+      description: create DocumentoComision
+      operationId: DocumentoComisionController.Post
       parameters:
       - in: body
         name: body
-        description: body for AnexoComision content
+        description: body for DocumentoComision content
         required: true
         schema:
-          $ref: '#/definitions/models.AnexoComision'
+          $ref: '#/definitions/models.DocumentoComision'
       responses:
         "201":
-          description: '{int} models.AnexoComision'
+          description: '{int} models.DocumentoComision'
         "403":
           description: body is empty
-  /anexo_comision/{id}:
+  /documento_comision/{id}:
     get:
       tags:
-      - anexo_comision
-      description: get AnexoComision by id
-      operationId: AnexoComisionController.Get One
+      - documento_comision
+      description: get DocumentoComision by id
+      operationId: DocumentoComisionController.Get One
       parameters:
       - in: path
         name: id
@@ -82,14 +82,14 @@ paths:
         "200":
           description: ""
           schema:
-            $ref: '#/definitions/models.AnexoComision'
+            $ref: '#/definitions/models.DocumentoComision'
         "403":
           description: :id is empty
     put:
       tags:
-      - anexo_comision
-      description: update the AnexoComision
-      operationId: AnexoComisionController.Put
+      - documento_comision
+      description: update the DocumentoComision
+      operationId: DocumentoComisionController.Put
       parameters:
       - in: path
         name: id
@@ -98,22 +98,22 @@ paths:
         type: string
       - in: body
         name: body
-        description: body for AnexoComision content
+        description: body for DocumentoComision content
         required: true
         schema:
-          $ref: '#/definitions/models.AnexoComision'
+          $ref: '#/definitions/models.DocumentoComision'
       responses:
         "200":
           description: ""
           schema:
-            $ref: '#/definitions/models.AnexoComision'
+            $ref: '#/definitions/models.DocumentoComision'
         "403":
           description: :id is not int
     delete:
       tags:
-      - anexo_comision
-      description: delete the AnexoComision
-      operationId: AnexoComisionController.Delete
+      - documento_comision
+      description: delete the DocumentoComision
+      operationId: DocumentoComisionController.Delete
       parameters:
       - in: path
         name: id
@@ -125,12 +125,12 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-  /anexo_solicitud/:
+  /documento_solicitud/:
     get:
       tags:
-      - anexo_solicitud
-      description: get AnexoSolicitud
-      operationId: AnexoSolicitudController.Get All
+      - documento_solicitud
+      description: get DocumentoSolicitud
+      operationId: DocumentoSolicitudController.Get All
       parameters:
       - in: query
         name: query
@@ -160,32 +160,32 @@ paths:
         "200":
           description: ""
           schema:
-            $ref: '#/definitions/models.AnexoSolicitud'
+            $ref: '#/definitions/models.DocumentoSolicitud'
         "403":
           description: ""
     post:
       tags:
-      - anexo_solicitud
-      description: create AnexoSolicitud
-      operationId: AnexoSolicitudController.Post
+      - documento_solicitud
+      description: create DocumentoSolicitud
+      operationId: DocumentoSolicitudController.Post
       parameters:
       - in: body
         name: body
-        description: body for AnexoSolicitud content
+        description: body for DocumentoSolicitud content
         required: true
         schema:
-          $ref: '#/definitions/models.AnexoSolicitud'
+          $ref: '#/definitions/models.DocumentoSolicitud'
       responses:
         "201":
-          description: '{int} models.AnexoSolicitud'
+          description: '{int} models.DocumentoSolicitud'
         "403":
           description: body is empty
-  /anexo_solicitud/{id}:
+  /documento_solicitud/{id}:
     get:
       tags:
-      - anexo_solicitud
-      description: get AnexoSolicitud by id
-      operationId: AnexoSolicitudController.Get One
+      - documento_solicitud
+      description: get DocumentoSolicitud by id
+      operationId: DocumentoSolicitudController.Get One
       parameters:
       - in: path
         name: id
@@ -196,14 +196,14 @@ paths:
         "200":
           description: ""
           schema:
-            $ref: '#/definitions/models.AnexoSolicitud'
+            $ref: '#/definitions/models.DocumentoSolicitud'
         "403":
           description: :id is empty
     put:
       tags:
-      - anexo_solicitud
-      description: update the AnexoSolicitud
-      operationId: AnexoSolicitudController.Put
+      - documento_solicitud
+      description: update the DocumentoSolicitud
+      operationId: DocumentoSolicitudController.Put
       parameters:
       - in: path
         name: id
@@ -212,22 +212,22 @@ paths:
         type: string
       - in: body
         name: body
-        description: body for AnexoSolicitud content
+        description: body for DocumentoSolicitud content
         required: true
         schema:
-          $ref: '#/definitions/models.AnexoSolicitud'
+          $ref: '#/definitions/models.DocumentoSolicitud'
       responses:
         "200":
           description: ""
           schema:
-            $ref: '#/definitions/models.AnexoSolicitud'
+            $ref: '#/definitions/models.DocumentoSolicitud'
         "403":
           description: :id is not int
     delete:
       tags:
-      - anexo_solicitud
-      description: delete the AnexoSolicitud
-      operationId: AnexoSolicitudController.Delete
+      - documento_solicitud
+      description: delete the DocumentoSolicitud
+      operationId: DocumentoSolicitudController.Delete
       parameters:
       - in: path
         name: id
@@ -1950,8 +1950,8 @@ paths:
         "403":
           description: id is empty
 definitions:
-  models.AnexoComision:
-    title: AnexoComision
+  models.DocumentoComision:
+    title: DocumentoComision
     type: object
     properties:
       Activo:
@@ -1972,8 +1972,8 @@ definitions:
         format: int64
       TipoDocumentoId:
         $ref: '#/definitions/models.TipoDocumentoComision'
-  models.AnexoSolicitud:
-    title: AnexoSolicitud
+  models.DocumentoSolicitud:
+    title: DocumentoSolicitud
     type: object
     properties:
       Activo:
@@ -2061,7 +2061,7 @@ definitions:
         type: boolean
       CodigoAbreviacion:
         type: string
-      Decripcion:
+      Descripcion:
         type: string
       FechaCreacion:
         type: string
@@ -2118,7 +2118,7 @@ definitions:
         format: int64
       RolUsuarioId:
         $ref: '#/definitions/models.RolUsuario'
-      TercerosId:
+      terceroId:
         type: integer
         format: int64
   models.HistoricoEstadoSolicitud:
@@ -2142,7 +2142,7 @@ definitions:
         $ref: '#/definitions/models.RolUsuario'
       SolicitudId:
         $ref: '#/definitions/models.Solicitud'
-      TercerosId:
+      terceroId:
         type: integer
         format: int64
   models.Observacion:
@@ -2225,7 +2225,7 @@ definitions:
         format: int64
       ObservacionCierre:
         type: string
-      TercerosId:
+      terceroId:
         type: integer
         format: int64
       TipoSolicitudId:
@@ -2339,9 +2339,9 @@ tags:
 - name: observacion
   description: |
     ObservacionController operations for Observacion
-- name: anexo_solicitud
+- name: documento_solicitud
   description: |
-    AnexoSolicitudController operations for AnexoSolicitud
+    DocumentoSolicitudController operations for DocumentoSolicitud
 - name: tipo_documento_solicitud
   description: |
     TipoDocumentoSolicitudController operations for TipoDocumentoSolicitud
@@ -2354,9 +2354,9 @@ tags:
 - name: estado_comision
   description: |
     EstadoComisionController operations for EstadoComision
-- name: anexo_comision
+- name: documento_comision
   description: |
-    AnexoComisionController operations for AnexoComision
+    DocumentoComisionController operations for DocumentoComision
 - name: tipo_documento_comision
   description: |
     TipoDocumentoComisionController operations for TipoDocumentoComision

@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -16,8 +15,8 @@ type Seguimiento struct {
 	TipoSeguimientoId         *TipoSeguimiento         `orm:"column(tipo_seguimiento_id);rel(fk)"`
 	Descripcion               string                   `orm:"column(descripcion);null"`
 	Activo                    bool                     `orm:"column(activo);null"`
-	FechaCreacion             time.Time                `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
-	FechaModificacion         time.Time                `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
+	FechaCreacion             string                   `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
+	FechaModificacion         string                   `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
 }
 
 func (t *Seguimiento) TableName() string {

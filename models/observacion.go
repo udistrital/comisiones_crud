@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -15,8 +14,8 @@ type Observacion struct {
 	HistoricoEstadoSolicitudId *HistoricoEstadoSolicitud `orm:"column(historico_estado_solicitud_id);rel(fk)"`
 	Descripcion                string                    `orm:"column(descripcion);null"`
 	Activo                     bool                      `orm:"column(activo);null"`
-	FechaCreacion              time.Time                 `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
-	FechaModificacion          time.Time                 `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
+	FechaCreacion              string                    `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
+	FechaModificacion          string                    `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
 }
 
 func (t *Observacion) TableName() string {

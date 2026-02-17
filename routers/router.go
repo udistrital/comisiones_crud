@@ -64,9 +64,9 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/anexo_solicitud",
+		beego.NSNamespace("/documento_solicitud",
 			beego.NSInclude(
-				&controllers.AnexoSolicitudController{},
+				&controllers.DocumentoSolicitudController{},
 			),
 		),
 
@@ -94,9 +94,9 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/anexo_comision",
+		beego.NSNamespace("/documento_comision",
 			beego.NSInclude(
-				&controllers.AnexoComisionController{},
+				&controllers.DocumentoComisionController{},
 			),
 		),
 

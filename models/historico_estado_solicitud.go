@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -15,10 +14,10 @@ type HistoricoEstadoSolicitud struct {
 	SolicitudId       *Solicitud       `orm:"column(solicitud_id);rel(fk)"`
 	EstadoSolicitudId *EstadoSolicitud `orm:"column(estado_solicitud_id);rel(fk)"`
 	RolUsuarioId      *RolUsuario      `orm:"column(rol_usuario_id);rel(fk)"`
-	TercerosId        int              `orm:"column(terceros_id);null"`
+	TerceroId         int              `orm:"column(tercero_id);null"`
 	Activo            bool             `orm:"column(activo);null"`
-	FechaCreacion     time.Time        `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
-	FechaModificacion time.Time        `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
+	FechaCreacion     string           `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
+	FechaModificacion string           `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
 }
 
 func (t *HistoricoEstadoSolicitud) TableName() string {

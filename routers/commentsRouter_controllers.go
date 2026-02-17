@@ -7,96 +7,6 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: "/",
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: "/",
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: "/:id",
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: "/:id",
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoComisionController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: "/:id",
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"],
-        beego.ControllerComments{
-            Method: "Post",
-            Router: "/",
-            AllowHTTPMethods: []string{"post"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"],
-        beego.ControllerComments{
-            Method: "GetAll",
-            Router: "/",
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"],
-        beego.ControllerComments{
-            Method: "GetOne",
-            Router: "/:id",
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"],
-        beego.ControllerComments{
-            Method: "Put",
-            Router: "/:id",
-            AllowHTTPMethods: []string{"put"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:AnexoSolicitudController"],
-        beego.ControllerComments{
-            Method: "Delete",
-            Router: "/:id",
-            AllowHTTPMethods: []string{"delete"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
     beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:ComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:ComisionController"],
         beego.ControllerComments{
             Method: "Post",
@@ -179,6 +89,96 @@ func init() {
             Params: nil})
 
     beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DetalleSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DetalleSolicitudController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: "/",
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: "/",
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoComisionController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: "/",
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: "/",
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"] = append(beego.GlobalControllerRouter["github.com/udistrital/comisiones_estudio_crud/controllers:DocumentoSolicitudController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",

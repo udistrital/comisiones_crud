@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/udistrital/comisiones_estudio_crud/models"
+	"github.com/udistrital/utils_oas/time_bogota"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
@@ -35,6 +36,8 @@ func (c *ComisionController) URLMapping() {
 // @router / [post]
 func (c *ComisionController) Post() {
 	var v models.Comision
+	v.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	v.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if _, err := models.AddComision(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
@@ -151,6 +154,8 @@ func (c *ComisionController) Put() {
 	id, _ := strconv.Atoi(idStr)
 	v := models.Comision{Id: id}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+		v.FechaCreacion = time_bogota.TiempoCorreccionFormato(v.FechaCreacion)
+		v.FechaModificacion = time_bogota.TiempoBogotaFormato()
 		if err := models.UpdateComisionById(&v); err == nil {
 			c.Data["json"] = map[string]interface{}{"Success": true, "Status": "200", "Message": "Update successful", "Data": v}
 		} else {
