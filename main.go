@@ -39,3 +39,4 @@ func main() {
 	beego.ErrorController(&customerrorv2.CustomErrorController{})
 	beego.Run()
 }
+
