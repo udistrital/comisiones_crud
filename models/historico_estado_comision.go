@@ -14,7 +14,7 @@ type HistoricoEstadoComision struct {
 	ComisionId        *Comision       `orm:"column(comision_id);rel(fk)"`
 	EstadoComisionId  *EstadoComision `orm:"column(estado_comision_id);rel(fk)"`
 	TerceroId         int             `orm:"column(tercero_id);null"`
-	RolUsuarioId      *RolUsuario     `orm:"column(rol_usuario_id);rel(fk)"`
+	RolUsuario        string          `orm:"column(rol_usuario);null"`
 	Descripcion       string          `orm:"column(descripcion);null"`
 	Activo            bool            `orm:"column(activo);null"`
 	FechaCreacion     string          `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
