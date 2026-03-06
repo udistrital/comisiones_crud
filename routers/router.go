@@ -52,12 +52,6 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/rol_usuario",
-			beego.NSInclude(
-				&controllers.RolUsuarioController{},
-			),
-		),
-
 		beego.NSNamespace("/observacion",
 			beego.NSInclude(
 				&controllers.ObservacionController{},

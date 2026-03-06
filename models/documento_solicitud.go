@@ -11,7 +11,7 @@ import (
 
 type DocumentoSolicitud struct {
 	Id                         int                       `orm:"column(id);pk;auto"`
-	DocumentoId                int                       `orm:"column(documento_id);null"`
+	DocumentoId                string                    `orm:"column(documento_id);null"`
 	HistoricoEstadoSolicitudId *HistoricoEstadoSolicitud `orm:"column(historico_estado_solicitud_id);rel(fk)"`
 	TipoDocumentoId            *TipoDocumentoSolicitud   `orm:"column(tipo_documento_id);rel(fk)"`
 	EstadoDocumentoId          *EstadoDocumento          `orm:"column(estado_documento_id);rel(fk)"`

@@ -1,6 +1,6 @@
-module github.com/udistrital/comisiones_estudio_crud
+module github.com/udistrital/comisiones_crud
 
-go 1.25.5
+go 1.25.0
 
 require (
 	github.com/astaxie/beego v1.12.3

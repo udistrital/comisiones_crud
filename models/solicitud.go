@@ -13,7 +13,7 @@ type Solicitud struct {
 	Id                int            `orm:"column(id);pk;auto"`
 	TerceroId         int            `orm:"column(tercero_id);null"`
 	TipoSolicitudId   *TipoSolicitud `orm:"column(tipo_solicitud_id);rel(fk)"`
-	ComisionId        *Comision      `orm:"column(comision_id);rel(fk)"`
+	ComisionId        *Comision      `orm:"column(comision_id);rel(fk);null"`
 	ObservacionCierre string         `orm:"column(observacion_cierre);null"`
 	Activo            bool           `orm:"column(activo);null"`
 	FechaCreacion     string         `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
