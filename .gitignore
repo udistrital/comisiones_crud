@@ -7,6 +7,11 @@
 *.dll
 *.so
 *.dylib
+lastupdate.tmp
+
+#binarios
+comisiones_crud
+comisiones_crud.exe
 
 # Test binary, built with `go test -c`
 *.test
@@ -23,6 +28,15 @@ profile.cov
 # Go workspace file
 go.work
 go.work.sum
+go.mod
+go.sum
+
+# =========================
+# Swagger generated files (opcional)
+# =========================
+swagger/**
+!swagger/swagger.json
+!swagger/swagger.yml
 
 # env file
 prueba.env
