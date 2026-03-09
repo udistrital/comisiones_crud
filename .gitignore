@@ -28,8 +28,6 @@ profile.cov
 # Go workspace file
 go.work
 go.work.sum
-go.mod
-go.sum
 
 # =========================
 # Swagger generated files (opcional)
