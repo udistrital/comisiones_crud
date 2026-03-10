@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/astaxie/beego v1.12.3
 	github.com/lib/pq v1.11.2
-	github.com/udistrital/utils_oas v0.4.1
+	github.com/udistrital/utils_oas v0.4.2
 )
 
 require (
