@@ -38,6 +38,7 @@ swagger/**
 
 # env file
 prueba.env
+*.env
 
 # Editor/IDE
 # .idea/
