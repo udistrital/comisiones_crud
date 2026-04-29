@@ -695,6 +695,120 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /estado_documento_comision/:
+    get:
+      tags:
+      - estado_documento_comision
+      description: get EstadoDocumentoComision
+      operationId: EstadoDocumentoComisionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EstadoDocumentoComision'
+        "403":
+          description: ""
+    post:
+      tags:
+      - estado_documento_comision
+      description: create EstadoDocumentoComision
+      operationId: EstadoDocumentoComisionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for EstadoDocumentoComision content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EstadoDocumentoComision'
+      responses:
+        "201":
+          description: '{int} models.EstadoDocumentoComision'
+        "403":
+          description: body is empty
+  /estado_documento_comision/{id}:
+    get:
+      tags:
+      - estado_documento_comision
+      description: get EstadoDocumentoComision by id
+      operationId: EstadoDocumentoComisionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EstadoDocumentoComision'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - estado_documento_comision
+      description: update the EstadoDocumentoComision
+      operationId: EstadoDocumentoComisionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for EstadoDocumentoComision content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EstadoDocumentoComision'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EstadoDocumentoComision'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - estado_documento_comision
+      description: delete the EstadoDocumentoComision
+      operationId: EstadoDocumentoComisionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /estado_solicitud/:
     get:
       tags:
@@ -1844,7 +1958,14 @@ definitions:
         type: boolean
       Descripcion:
         type: string
+      Facultad:
+        type: integer
+        format: int64
       FechaCreacion:
+        type: string
+      FechaFinal:
+        type: string
+      FechaInicio:
         type: string
       FechaModificacion:
         type: string
@@ -1877,6 +1998,8 @@ definitions:
       DocumentoId:
         type: integer
         format: int64
+      EstadoDocumentoComisionId:
+        $ref: '#/definitions/models.EstadoDocumentoComision'
       FechaCreacion:
         type: string
       FechaModificacion:
@@ -1931,6 +2054,25 @@ definitions:
         type: string
   models.EstadoDocumento:
     title: EstadoDocumento
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.EstadoDocumentoComision:
+    title: EstadoDocumentoComision
     type: object
     properties:
       Activo:
@@ -2109,6 +2251,8 @@ definitions:
         format: int64
       Nombre:
         type: string
+      RolUsuario:
+        type: string
   models.TipoSeguimiento:
     title: TipoSeguimiento
     type: object
@@ -2187,6 +2331,9 @@ tags:
 - name: documento_comision
   description: |
     DocumentoComisionController operations for DocumentoComision
+- name: estado_documento_comision
+  description: |
+    EstadoDocumentoComisionController operations for EstadoDocumentoComision
 - name: tipo_documento_comision
   description: |
     TipoDocumentoComisionController operations for TipoDocumentoComision
