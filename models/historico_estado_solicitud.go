@@ -13,7 +13,7 @@ type HistoricoEstadoSolicitud struct {
 	Id                int              `orm:"column(id);pk;auto"`
 	SolicitudId       *Solicitud       `orm:"column(solicitud_id);rel(fk)"`
 	EstadoSolicitudId *EstadoSolicitud `orm:"column(estado_solicitud_id);rel(fk)"`
-	RolUsuarioId      *RolUsuario      `orm:"column(rol_usuario_id);rel(fk)"`
+	RolUsuario        string           `orm:"column(rol_usuario);null"`
 	TerceroId         int              `orm:"column(tercero_id);null"`
 	Activo            bool             `orm:"column(activo);null"`
 	FechaCreacion     string           `orm:"column(fecha_creacion);type(timestamp without time zone);null"`

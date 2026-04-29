@@ -15,352 +15,6 @@
     },
     "basePath": "/v1",
     "paths": {
-        "/documento_comision/": {
-            "get": {
-                "tags": [
-                    "documento_comision"
-                ],
-                "description": "get DocumentoComision",
-                "operationId": "DocumentoComisionController.Get All",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "query",
-                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "fields",
-                        "description": "Fields returned. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "sortby",
-                        "description": "Sorted-by fields. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "order",
-                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "description": "Limit the size of result set. Must be an integer",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "offset",
-                        "description": "Start position of result set. Must be an integer",
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoComision"
-                        }
-                    },
-                    "403": {
-                        "description": ""
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "documento_comision"
-                ],
-                "description": "create DocumentoComision",
-                "operationId": "DocumentoComisionController.Post",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DocumentoComision content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoComision"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "{int} models.DocumentoComision"
-                    },
-                    "403": {
-                        "description": "body is empty"
-                    }
-                }
-            }
-        },
-        "/documento_comision/{id}": {
-            "get": {
-                "tags": [
-                    "documento_comision"
-                ],
-                "description": "get DocumentoComision by id",
-                "operationId": "DocumentoComisionController.Get One",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The key for staticblock",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoComision"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is empty"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "documento_comision"
-                ],
-                "description": "update the DocumentoComision",
-                "operationId": "DocumentoComisionController.Put",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to update",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DocumentoComision content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoComision"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoComision"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is not int"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "documento_comision"
-                ],
-                "description": "delete the DocumentoComision",
-                "operationId": "DocumentoComisionController.Delete",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to delete",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "{string} delete success!"
-                    },
-                    "403": {
-                        "description": "id is empty"
-                    }
-                }
-            }
-        },
-        "/documento_solicitud/": {
-            "get": {
-                "tags": [
-                    "documento_solicitud"
-                ],
-                "description": "get DocumentoSolicitud",
-                "operationId": "DocumentoSolicitudController.Get All",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "query",
-                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "fields",
-                        "description": "Fields returned. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "sortby",
-                        "description": "Sorted-by fields. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "order",
-                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "description": "Limit the size of result set. Must be an integer",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "offset",
-                        "description": "Start position of result set. Must be an integer",
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoSolicitud"
-                        }
-                    },
-                    "403": {
-                        "description": ""
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "documento_solicitud"
-                ],
-                "description": "create DocumentoSolicitud",
-                "operationId": "DocumentoSolicitudController.Post",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DocumentoSolicitud content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoSolicitud"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "{int} models.DocumentoSolicitud"
-                    },
-                    "403": {
-                        "description": "body is empty"
-                    }
-                }
-            }
-        },
-        "/documento_solicitud/{id}": {
-            "get": {
-                "tags": [
-                    "documento_solicitud"
-                ],
-                "description": "get DocumentoSolicitud by id",
-                "operationId": "DocumentoSolicitudController.Get One",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The key for staticblock",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoSolicitud"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is empty"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "documento_solicitud"
-                ],
-                "description": "update the DocumentoSolicitud",
-                "operationId": "DocumentoSolicitudController.Put",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to update",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for DocumentoSolicitud content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoSolicitud"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.DocumentoSolicitud"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is not int"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "documento_solicitud"
-                ],
-                "description": "delete the DocumentoSolicitud",
-                "operationId": "DocumentoSolicitudController.Delete",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to delete",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "{string} delete success!"
-                    },
-                    "403": {
-                        "description": "id is empty"
-                    }
-                }
-            }
-        },
         "/comision/": {
             "get": {
                 "tags": [
@@ -688,6 +342,352 @@
                 ],
                 "description": "delete the DetalleSolicitud",
                 "operationId": "DetalleSolicitudController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/documento_comision/": {
+            "get": {
+                "tags": [
+                    "documento_comision"
+                ],
+                "description": "get DocumentoComision",
+                "operationId": "DocumentoComisionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoComision"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "documento_comision"
+                ],
+                "description": "create DocumentoComision",
+                "operationId": "DocumentoComisionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DocumentoComision content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoComision"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.DocumentoComision"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/documento_comision/{id}": {
+            "get": {
+                "tags": [
+                    "documento_comision"
+                ],
+                "description": "get DocumentoComision by id",
+                "operationId": "DocumentoComisionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoComision"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "documento_comision"
+                ],
+                "description": "update the DocumentoComision",
+                "operationId": "DocumentoComisionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DocumentoComision content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoComision"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoComision"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "documento_comision"
+                ],
+                "description": "delete the DocumentoComision",
+                "operationId": "DocumentoComisionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/documento_solicitud/": {
+            "get": {
+                "tags": [
+                    "documento_solicitud"
+                ],
+                "description": "get DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "documento_solicitud"
+                ],
+                "description": "create DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DocumentoSolicitud content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.DocumentoSolicitud"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/documento_solicitud/{id}": {
+            "get": {
+                "tags": [
+                    "documento_solicitud"
+                ],
+                "description": "get DocumentoSolicitud by id",
+                "operationId": "DocumentoSolicitudController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "documento_solicitud"
+                ],
+                "description": "update the DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for DocumentoSolicitud content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.DocumentoSolicitud"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "documento_solicitud"
+                ],
+                "description": "delete the DocumentoSolicitud",
+                "operationId": "DocumentoSolicitudController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -1726,179 +1726,6 @@
                 ],
                 "description": "delete the Observacion",
                 "operationId": "ObservacionController.Delete",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to delete",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "{string} delete success!"
-                    },
-                    "403": {
-                        "description": "id is empty"
-                    }
-                }
-            }
-        },
-        "/rol_usuario/": {
-            "get": {
-                "tags": [
-                    "rol_usuario"
-                ],
-                "description": "get RolUsuario",
-                "operationId": "RolUsuarioController.Get All",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "query",
-                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "fields",
-                        "description": "Fields returned. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "sortby",
-                        "description": "Sorted-by fields. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "order",
-                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "description": "Limit the size of result set. Must be an integer",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "offset",
-                        "description": "Start position of result set. Must be an integer",
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.RolUsuario"
-                        }
-                    },
-                    "403": {
-                        "description": ""
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "rol_usuario"
-                ],
-                "description": "create RolUsuario",
-                "operationId": "RolUsuarioController.Post",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for RolUsuario content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.RolUsuario"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "{int} models.RolUsuario"
-                    },
-                    "403": {
-                        "description": "body is empty"
-                    }
-                }
-            }
-        },
-        "/rol_usuario/{id}": {
-            "get": {
-                "tags": [
-                    "rol_usuario"
-                ],
-                "description": "get RolUsuario by id",
-                "operationId": "RolUsuarioController.Get One",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The key for staticblock",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.RolUsuario"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is empty"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "rol_usuario"
-                ],
-                "description": "update the RolUsuario",
-                "operationId": "RolUsuarioController.Put",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to update",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for RolUsuario content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.RolUsuario"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.RolUsuario"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is not int"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "rol_usuario"
-                ],
-                "description": "delete the RolUsuario",
-                "operationId": "RolUsuarioController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -2958,6 +2785,53 @@
         }
     },
     "definitions": {
+        "models.Comision": {
+            "title": "Comision",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.DetalleSolicitud": {
+            "title": "DetalleSolicitud",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Formulario": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "SolicitudId": {
+                    "$ref": "#/definitions/models.Solicitud"
+                }
+            }
+        },
         "models.DocumentoComision": {
             "title": "DocumentoComision",
             "type": "object",
@@ -2970,12 +2844,10 @@
                     "format": "int64"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "HistoricoEstadoComisionId": {
                     "$ref": "#/definitions/models.HistoricoEstadoComision"
@@ -3004,12 +2876,10 @@
                     "$ref": "#/definitions/models.EstadoDocumento"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "HistoricoEstadoSolicitudId": {
                     "$ref": "#/definitions/models.HistoricoEstadoSolicitud"
@@ -3020,57 +2890,6 @@
                 },
                 "TipoDocumentoId": {
                     "$ref": "#/definitions/models.TipoDocumentoSolicitud"
-                }
-            }
-        },
-        "models.Comision": {
-            "title": "Comision",
-            "type": "object",
-            "properties": {
-                "Activo": {
-                    "type": "boolean"
-                },
-                "Descripcion": {
-                    "type": "string"
-                },
-                "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "Id": {
-                    "type": "integer",
-                    "format": "int64"
-                }
-            }
-        },
-        "models.DetalleSolicitud": {
-            "title": "DetalleSolicitud",
-            "type": "object",
-            "properties": {
-                "Activo": {
-                    "type": "boolean"
-                },
-                "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "Formulario": {
-                    "type": "string"
-                },
-                "Id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "SolicitudId": {
-                    "$ref": "#/definitions/models.Solicitud"
                 }
             }
         },
@@ -3088,12 +2907,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3118,12 +2935,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3148,12 +2963,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3181,21 +2994,19 @@
                     "$ref": "#/definitions/models.EstadoComision"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "RolUsuarioId": {
-                    "$ref": "#/definitions/models.RolUsuario"
+                "RolUsuario": {
+                    "type": "string"
                 },
-                "terceroId": {
+                "TerceroId": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -3212,24 +3023,22 @@
                     "$ref": "#/definitions/models.EstadoSolicitud"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "RolUsuarioId": {
-                    "$ref": "#/definitions/models.RolUsuario"
+                "RolUsuario": {
+                    "type": "string"
                 },
                 "SolicitudId": {
                     "$ref": "#/definitions/models.Solicitud"
                 },
-                "terceroId": {
+                "TerceroId": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -3246,12 +3055,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "HistoricoEstadoSolicitudId": {
                     "$ref": "#/definitions/models.HistoricoEstadoSolicitud"
@@ -3259,36 +3066,6 @@
                 "Id": {
                     "type": "integer",
                     "format": "int64"
-                }
-            }
-        },
-        "models.RolUsuario": {
-            "title": "RolUsuario",
-            "type": "object",
-            "properties": {
-                "Activo": {
-                    "type": "boolean"
-                },
-                "CodigoAbreviacion": {
-                    "type": "string"
-                },
-                "Descripcion": {
-                    "type": "string"
-                },
-                "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "Id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "Nombre": {
-                    "type": "string"
                 }
             }
         },
@@ -3303,12 +3080,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "HistoricoEstadoComisionId": {
                     "$ref": "#/definitions/models.HistoricoEstadoComision"
@@ -3333,12 +3108,10 @@
                     "$ref": "#/definitions/models.Comision"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3347,7 +3120,7 @@
                 "ObservacionCierre": {
                     "type": "string"
                 },
-                "terceroId": {
+                "TerceroId": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -3370,12 +3143,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3400,12 +3171,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3430,12 +3199,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3460,12 +3227,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -3501,10 +3266,6 @@
         {
             "name": "estado_solicitud",
             "description": "EstadoSolicitudController operations for EstadoSolicitud\n"
-        },
-        {
-            "name": "rol_usuario",
-            "description": "RolUsuarioController operations for RolUsuario\n"
         },
         {
             "name": "observacion",
