@@ -9,50 +9,49 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-type DocumentoComision struct {
-	Id                        int                      `orm:"column(id);pk;auto"`
-	DocumentoId               int                      `orm:"column(documento_id);null"`
-	HistoricoEstadoComisionId *HistoricoEstadoComision `orm:"column(historico_estado_comision_id);rel(fk)"`
-	TipoDocumentoId           *TipoDocumentoComision   `orm:"column(tipo_documento_id);rel(fk)"`
-	EstadoDocumentoId         *EstadoDocumentoComision `orm:"column(estado_documento_id);rel(fk)"`
-	Activo                    bool                     `orm:"column(activo);null"`
-	FechaCreacion             string                   `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
-	FechaModificacion         string                   `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
+type EstadoDocumentoComision struct {
+	Id                int    `orm:"column(id);pk;auto"`
+	Nombre            string `orm:"column(nombre);null"`
+	Descripcion       string `orm:"column(descripcion);null"`
+	CodigoAbreviacion string `orm:"column(codigo_abreviacion);null"`
+	Activo            bool   `orm:"column(activo);null"`
+	FechaCreacion     string `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
+	FechaModificacion string `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
 }
 
-func (t *DocumentoComision) TableName() string {
-	return "documento_comision"
+func (t *EstadoDocumentoComision) TableName() string {
+	return "estado_documento_comision"
 }
 
 func init() {
-	orm.RegisterModel(new(DocumentoComision))
+	orm.RegisterModel(new(EstadoDocumentoComision))
 }
 
-// AddDocumentoComision insert a new DocumentoComision into database and returns
+// AddEstadoDocumento insert a new EstadoDocumentoComision into database and returns
 // last inserted Id on success.
-func AddDocumentoComision(m *DocumentoComision) (id int64, err error) {
+func AddEstadoDocumentoComision(m *EstadoDocumentoComision) (id int64, err error) {
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
 }
 
-// GetDocumentoComisionById retrieves DocumentoComision by Id. Returns error if
+// GetEstadoDocumentoById retrieves EstadoDocumentoComision by Id. Returns error if
 // Id doesn't exist
-func GetDocumentoComisionById(id int) (v *DocumentoComision, err error) {
+func GetEstadoDocumentoComisionById(id int) (v *EstadoDocumentoComision, err error) {
 	o := orm.NewOrm()
-	v = &DocumentoComision{Id: id}
+	v = &EstadoDocumentoComision{Id: id}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
 	return nil, err
 }
 
-// GetAllDocumentoComision retrieves all DocumentoComision matches certain condition. Returns empty list if
+// GetAllEstadoDocumento retrieves all EstadoDocumentoComision matches certain condition. Returns empty list if
 // no records exist
-func GetAllDocumentoComision(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllEstadoDocumentoComision(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(DocumentoComision)).RelatedSel()
+	qs := o.QueryTable(new(EstadoDocumentoComision))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
@@ -102,7 +101,7 @@ func GetAllDocumentoComision(query map[string]string, fields []string, sortby []
 		}
 	}
 
-	var l []DocumentoComision
+	var l []EstadoDocumentoComision
 	qs = qs.OrderBy(sortFields...)
 	if _, err = qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
@@ -125,11 +124,11 @@ func GetAllDocumentoComision(query map[string]string, fields []string, sortby []
 	return nil, err
 }
 
-// UpdateDocumentoComision updates DocumentoComision by Id and returns error if
+// UpdateEstadoDocumento updates EstadoDocumentoComision by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateDocumentoComisionById(m *DocumentoComision) (err error) {
+func UpdateEstadoDocumentoComisionById(m *EstadoDocumentoComision) (err error) {
 	o := orm.NewOrm()
-	v := DocumentoComision{Id: m.Id}
+	v := EstadoDocumentoComision{Id: m.Id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
@@ -140,15 +139,15 @@ func UpdateDocumentoComisionById(m *DocumentoComision) (err error) {
 	return
 }
 
-// DeleteDocumentoComision deletes DocumentoComision by Id and returns error if
+// DeleteEstadoDocumento deletes EstadoDocumentoComision by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteDocumentoComision(id int) (err error) {
+func DeleteEstadoDocumentoComision(id int) (err error) {
 	o := orm.NewOrm()
-	v := DocumentoComision{Id: id}
+	v := EstadoDocumentoComision{Id: id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Delete(&DocumentoComision{Id: id}); err == nil {
+		if num, err = o.Delete(&EstadoDocumentoComision{Id: id}); err == nil {
 			fmt.Println("Number of records deleted in database:", num)
 		}
 	}

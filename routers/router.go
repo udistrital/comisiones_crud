@@ -100,6 +100,12 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/estado_documento_comision",
+			beego.NSInclude(
+				&controllers.EstadoDocumentoComisionController{},
+			),
+		),
+
 		beego.NSNamespace("/tipo_documento_comision",
 			beego.NSInclude(
 				&controllers.TipoDocumentoComisionController{},
