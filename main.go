@@ -60,4 +60,3 @@ func main() {
 	security.SetSecurityHeaders()
 	beego.Run()
 }
-

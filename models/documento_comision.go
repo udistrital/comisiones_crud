@@ -14,7 +14,7 @@ type DocumentoComision struct {
 	DocumentoId               int                      `orm:"column(documento_id);null"`
 	HistoricoEstadoComisionId *HistoricoEstadoComision `orm:"column(historico_estado_comision_id);rel(fk)"`
 	TipoDocumentoId           *TipoDocumentoComision   `orm:"column(tipo_documento_id);rel(fk)"`
-	EstadoDocumentoId         *EstadoDocumentoComision `orm:"column(estado_documento_id);rel(fk)"`
+	EstadoDocumentoComisionId *EstadoDocumentoComision `orm:"column(estado_documento_comision_id);rel(fk)"`
 	Activo                    bool                     `orm:"column(activo);null"`
 	FechaCreacion             string                   `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
 	FechaModificacion         string                   `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
