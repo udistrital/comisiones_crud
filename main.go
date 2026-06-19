@@ -50,7 +50,6 @@ func main() {
 		AllowCredentials: true,
 	}))
 
-
 	apistatus.Init()
 	auditoria.InitMiddleware()
 	security.SetSecurityHeaders()
