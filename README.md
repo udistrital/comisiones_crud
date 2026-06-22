@@ -75,30 +75,17 @@ docker ps
 # No implementado actualmente.
 ```
 
-
-### Ejecución Pruebas
-```shell
-# En proceso
-
-```
-
-Pruebas unitarias:
-
-```shell
-# En proceso.
-```
-
-
 ## Estado CI
 
 | Develop | Master | Sonar |
 | -- | -- | -- |
-| [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/comisiones_crud/status.svg?ref=refs/heads/develop)](https://hubci.portaloas.udistrital.edu.co/udistrital/comisiones_crud) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/comisiones_crud/status.svg?ref=refs/heads/master)](https://hubci.portaloas.udistrital.edu.co/udistrital/comisiones_crud) | [![Quality Gate Status](https://sonarqube.portaloas.udistrital.edu.co/api/project_badges/measure?project=comisiones_crud&metric=alert_status)](https://sonarqube.portaloas.udistrital.edu.co/dashboard?id=comisiones_crud) |
+| [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/comisiones_crud/status.svg?ref=refs/heads/develop)](https://hubci.portaloas.udistrital.edu.co/udistrital/comisiones_crud) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/comisiones_crud/status.svg?ref=refs/heads/master)](https://hubci.portaloas.udistrital.edu.co/udistrital/comisiones_crud) | [![Quality Gate Status](https://sonarqube.portaloas.udistrital.edu.co/api/project_badges/measure?project=comisiones_crud&metric=alert_status)](https://sonar.portaloas.udistrital.edu.co/dashboard?id=comisiones_crud) |
 
 
 ## Modelo de datos
 
-[Modelo de datos] .
+[Modelo de datos](database/resoluciones_new.dbm)
+
 
 
 ## Licencia
