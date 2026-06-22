@@ -84,7 +84,7 @@ docker ps
 
 ## Modelo de datos
 
-[Modelo de datos](database/resoluciones_new.dbm)
+[Modelo de datos](database/modelos.svg)
 
 
 
